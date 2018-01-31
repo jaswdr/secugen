@@ -1,0 +1,29 @@
+{
+    "name": "jaschweder/finger-img-process",
+    "description": "Fingerprint image processor",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan A. Schweder",
+            "email": "jonathanschweder@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-gd": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jaschweder\\FingerprintImage\\": "src/Jaschweder/FingerprintImage"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Jaschweder\\FingerprintImage\\": "tests/Jaschweder/FingerprintImage"
+        }
+    }
+}
