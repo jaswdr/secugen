@@ -17,22 +17,22 @@ class Enum implements ArrayAccess
         return (new ReflectionClass(__CLASS))->getConstants();
     }
 
-    public bool offsetExists ($offset)
+    public function offsetExists ($offset)
     {
         return array_key_exists($offset, $this->toArray());
     }
 
-    publicoffsetGet ($offset)
+    public function offsetGet ($offset)
     {
         return $this->toArray()[$offset];
     }
 
-    public void offsetSet ($offset ,$value)
+    public function offsetSet ($offset ,$value)
     {
         throw new Exception("Enum values need to be set has constants");
     }
 
-    public void offsetUnset ($offset)
+    public function offsetUnset ($offset)
     {
         throw new Exception("Enum values are constants and can't be unset");
     }

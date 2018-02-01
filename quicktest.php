@@ -10,6 +10,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Jaschweder\FingerprintImage\Image;
 use Jaschweder\FingerprintImage\Processor;
+use Jaschweder\FingerprintImage\Format;
 
 $image = new Image;
 $processor = new Processor($image);
@@ -19,8 +20,7 @@ $image->load(__DIR__ . '/tests/mocks/normal.jpg');
 $processor->run();
 
 // hex string
-$hex = file_get_contents(__DIR__ . '/tests/mocks/hex.txt');
-$image->fromhex($hex);
+$image->load(__DIR__ . '/tests/mocks/hex.txt', Format::HEX);
 $processor->run();
 
 $tmp = __DIR__ . '/.temp';

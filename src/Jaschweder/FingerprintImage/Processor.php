@@ -2,8 +2,6 @@
 
 namespace Jaschweder\FingerprintImage;
 
-use Jaschweder\FingerprintImage\Contracts\Image;
-
 class Processor {
 
     /**
@@ -11,7 +9,7 @@ class Processor {
      */
     private $image;
 
-    public function __construct(Image $image)
+    public function __construct($image)
     {
         $this->image = $image;
     }
